@@ -96,28 +96,7 @@ while True:
 
 video_capture.release()
 cv2.destroyAllWindows()
+Print('Done')
 
-
-'''
-    gray_float = np.float32(gray)
-    dst = cv2.cornerHarris(gray_float, 2, 3, 0.04)
-    dst = cv2.dilate(dst, None)
-    thresh = 0.11*dst.max()
-    for j in range(0, dst.shape[0]):
-        for i in range(0, dst.shape[1]):
-            if (dst[j, i] > thresh):
-                cv2.circle(frame, (i, j), 2, (0, 255, 0), 1)    
-
-# Sign Detection
-#                      
-    def detect_sign(gray, frame):
-    signs = sign_cascade.detectMultiScale(gray, 1.3, 5)
-    for (x, y, w, h) in signs:
-        cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
-        roi_gray = gray[y:y + h, x:x + w]
-        roi_color = frame[y:y + h, x:x + w]
-    return frame
-
-'''
 
 
